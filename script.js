@@ -30,8 +30,7 @@ function estimateTokens(text) {
   if (!text || !text.trim()) return 0;
   const chars = text.length;
   const words = text.trim().split(/\s+/).length;
-  // Weighted BPE heuristic tailored for modern LLMs (Qwen / DeepSeek / GPT-4)
-  return Math.round((chars / 4.0 + words * 1.28) / 2);
+  return Math.round((chars / 3.0 + words * 1.28) / 2);
 }
 
 /**
