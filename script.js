@@ -30,7 +30,7 @@ function estimateTokens(text) {
   if (!text || !text.trim()) return 0;
   const chars = text.length;
   const words = text.trim().split(/\s+/).length;
-  return Math.round((chars / 4.15 + words * 1.28) / 2);
+  return Math.round((chars / 5 + words * 1.28) / 2);
 }
 
 /**
